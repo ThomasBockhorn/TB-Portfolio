@@ -8,14 +8,13 @@
                      </span>
                     <br />
                     <span>
-                        Full Stack Web Developer
+                        Full-Stack Web Developer
                     </span>
                 </div>
                 <section class="intro">
                     <div>
-                        <span>
-                            <p>lorem</p>
-                        </span>
+                        <p class="text-center">Building websites is fun and challenging. Websites can also be creative endeavors that inspire.</p>
+                        <p class="text-center">-Thomas Bockhorn</p>
                     </div>
                 </section>
             </div>
