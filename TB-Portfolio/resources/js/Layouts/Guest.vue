@@ -42,8 +42,4 @@ export default {
         bottom: 0;
         left: 0;
     }
-
-    .parallax_layer{
-        transform: translateZ(0);
-    }
 </style>
