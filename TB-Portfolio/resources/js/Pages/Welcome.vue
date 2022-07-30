@@ -13,8 +13,7 @@
                 </div>
                 <section class="intro">
                     <div>
-                        <p class="text-center">Building websites is fun and challenging. Websites can also be creative endeavors that inspire.</p>
-                        <p class="text-center">-Thomas Bockhorn</p>
+                        <p class="text-center p-5">Building websites is fun and challenging. Websites can also be creative endeavors that inspire us to reach for new frontiers.</p>
                     </div>
                 </section>
             </div>
@@ -50,7 +49,6 @@ export default {
         background-clip:text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        padding: 5em;
     }
 
     #title {
