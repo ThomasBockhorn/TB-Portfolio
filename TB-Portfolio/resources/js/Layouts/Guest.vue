@@ -2,6 +2,7 @@
     <div>
         <main class="parallax">
             <div class="parallax_group">
+                <navbar></navbar>
                 <background> </background>
                 <div id="layer" class="parallax__layer">
                     <slot/>
@@ -13,10 +14,12 @@
 
 <script>
 import background from "../Components/frontend/background/background.vue";
+import navbar from "../Components/frontend/navbar/navbar.vue";
 
 export default {
     components:{
-        background
+        background,
+        navbar
     }
 }
 </script>

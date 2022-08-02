@@ -11,28 +11,32 @@
                         Full-Stack Web Developer
                     </span>
                 </div>
-                <section class="intro">
+                <section id="about" class="intro">
                     <div>
                         <p class="text-center p-5">Building websites is fun and challenging. Websites can also be creative endeavors that inspire us to reach for new frontiers.</p>
                     </div>
                 </section>
             </div>
+            <solar></solar>
+
+
         </guest_layout>
     </div>
 </template>
 
 <script>
 import guest_layout from "../Layouts/Guest.vue";
+import solar from "../Components/frontend/solar/solar.vue";
 
 export default {
     components:{
         guest_layout,
+        solar
     }
 }
 </script>
 
 <style scoped>
-
 
     section{
         position: absolute;
@@ -72,4 +76,6 @@ export default {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+
 </style>
