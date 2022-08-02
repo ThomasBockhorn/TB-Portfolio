@@ -123,7 +123,7 @@ export default {
 
 /* Planet animation durations */
 #mercury.orbit, #mercury .pos {
-    animation-duration: 2.89016s;
+    animation-duration: 5s;
 }
 
 /* Planet sizes */
@@ -137,7 +137,7 @@ export default {
 /* Planet shadow animations */
 #mercury .planet {
     animation-name: shadow-mercury;
-    animation-duration: 2.89016s;
+    animation-duration: 5s;
 }
 
 @keyframes shadow-mercury {
