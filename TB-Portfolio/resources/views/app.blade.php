@@ -1,24 +1,60 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="{{ str_replace('_', '-', app()->getLocale()) }}"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="{{ str_replace('_', '-', app()->getLocale()) }}"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}"> <!--<![endif]-->
+<head>
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title inertia>{{ config('app.name', 'Laravel') }}</title>
+    <meta name="description" content="Thomas Bockhorn web developer portfolio website">
+    <meta name="author" content="">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/css/base.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/css/vendor.css') }}">
 
-        <!-- Scripts -->
-        @routes
-        @vite('resources/js/app.js')
-        @inertiaHead
-    </head>
-    <body class="font-sans antialiased">
-        @inertia
-    </body>
+    <!-- script
+    ================================================== -->
+    <script type="application/javascript" src="{{ asset('frontend/js/js/modernizr.js') }}"></script>
+    <script type="application/javascript" src="{{ asset('frontend/js/js/pace.min.js') }}"></script>
+
+    <!-- favicons
+     ================================================== -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!--  Title
+    =================================================== -->
+
+
+    <!-- Scripts -->
+    @routes
+    @vite('resources/js/app.js')
+    @inertiaHead
+</head>
+
+<body id="top">
+    @inertia
+
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+
+<!-- Java Script
+================================================== -->
+<script type="application/javascript" src="{{ asset('frontend/js/js/jquery-2.1.3.min.js') }}"></script>
+<script type="application/javascript" src="{{ asset('frontend/js/js/plugins.js') }}"></script>
+<script type="application/javascript" src="{{ asset('frontend/js/js/main.js') }}"></script>
+
+</body>
+
 </html>
