@@ -1,67 +1,57 @@
-<script setup>
-import BreezeButton from '@/Components/Button.vue';
-import BreezeCheckbox from '@/Components/Checkbox.vue';
-import BreezeGuestLayout from '@/Layouts/Guest.vue';
-import BreezeInput from '@/Components/Input.vue';
-import BreezeLabel from '@/Components/Label.vue';
-import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
-import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
-
-defineProps({
-    canResetPassword: Boolean,
-    status: String,
-});
-
-const form = useForm({
-    email: '',
-    password: '',
-    remember: false
-});
-
-const submit = () => {
-    form.post(route('login'), {
-        onFinish: () => form.reset('password'),
-    });
-};
-</script>
-
 <template>
-    <BreezeGuestLayout>
-        <Head title="Log in" />
-
-        <BreezeValidationErrors class="mb-4" />
-
-        <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
-            {{ status }}
+    <div class = "h-screen font-sans login bg-cover">
+        <div class = "container mx-auto h-full flex flex-1 justify-center items-center">
+            <div class = "w-full max-w-lg">
+                <div class = "leading-loose">
+                    <form class = "max-w-xl m-4 p-10 bg-white rounded shadow-xl" @submit.prevent = "submit">
+                        <p class = "text-gray-800 font-medium text-center text-lg font-bold">Login</p>
+                        <div>
+                            <input id = "email" v-model = "form.email" aria-label = "Email"
+                                   class = "w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" name = "email"
+                                   placeholder = "Email" required = "" type = "text">
+                        </div>
+                        <div class = "mt-2">
+                            <label class = "block text-sm text-gray-600" for = "password">Password</label>
+                            <input id = "password" v-model = "form.password" aria-label = "Password"
+                                   class = "w-full px-5  py-1 text-gray-700 bg-gray-200 rounded" name = "password"
+                                   placeholder = "Password" required = "" type = "password">
+                        </div>
+                        <div class = "mt-4 items-center justify-between">
+                            <button class = "px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
+                                    type = "submit">Login
+                            </button>
+                            <Link
+                                class = "inline-block right-0 align-baseline  font-bold text-sm text-500 hover:text-blue-800"
+                                href = "/register">
+                                Forgot Password?
+                            </Link>
+                        </div>
+                        <a class = "inline-block right-0 align-baseline font-bold text-sm text-500 hover:text-blue-800"
+                           href = "#">
+                            Not registered ?
+                        </a>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <form @submit.prevent="submit">
-            <div>
-                <BreezeLabel for="email" value="Email" />
-                <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <BreezeLabel for="password" value="Password" />
-                <BreezeInput id="password" type="password" class="mt-1 block w-full" v-model="form.password" required autocomplete="current-password" />
-            </div>
-
-            <div class="block mt-4">
-                <label class="flex items-center">
-                    <BreezeCheckbox name="remember" v-model:checked="form.remember" />
-                    <span class="ml-2 text-sm text-gray-600">Remember me</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <Link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
-                    Forgot your password?
-                </Link>
-
-                <BreezeButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Log in
-                </BreezeButton>
-            </div>
-        </form>
-    </BreezeGuestLayout>
+    </div>
 </template>
+<script>
+import {Inertia} from '@inertiajs/inertia';
+import {reactive} from 'vue';
+
+export default {
+    setup() {
+        const form = reactive({
+            email: null,
+            password: null,
+        });
+
+        function submit() {
+            Inertia.post('/login', form);
+        }
+
+        return {form, submit}
+    }
+}
+</script>
