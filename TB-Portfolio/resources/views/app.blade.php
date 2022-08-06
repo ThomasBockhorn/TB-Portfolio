@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/css/base.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/css/vendor.css') }}">
+    <link rel="stylesheet" href="/backend/styles.css">
+    <link rel="stylesheet" href="/backend/all.css">
 
     <!-- script
     ================================================== -->
