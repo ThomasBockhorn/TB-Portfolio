@@ -13,23 +13,27 @@
 
     <!-- mobile specific metas
     ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- CSS
   ================================================== -->
-    <link rel="stylesheet" href="{{ asset('frontend/css/css/base.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/css/vendor.css') }}">
-    <link rel="stylesheet" href="/backend/styles.css">
+    <link rel = "stylesheet" href = "{{ asset('frontend/css/css/base.css') }}">
+    <link rel = "stylesheet" href = "{{ asset('frontend/css/css/main.css') }}">
+    <link rel = "stylesheet" href = "{{ asset('frontend/css/css/vendor.css') }}">
+    <link rel = "stylesheet" href = "{{ asset('backend/styles.css') }}">
+    <link rel = "stylesheet" href = "{{ asset('backend/all.css') }}">
+    <link href = "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i"
+          rel = "stylesheet">
+
 
     <!-- script
     ================================================== -->
-    <script type="application/javascript" src="{{ asset('frontend/js/js/modernizr.js') }}"></script>
-    <script type="application/javascript" src="{{ asset('frontend/js/js/pace.min.js') }}"></script>
+    <script type = "application/javascript" src = "{{ asset('frontend/js/js/modernizr.js') }}"></script>
+    <script type = "application/javascript" src = "{{ asset('frontend/js/js/pace.min.js') }}"></script>
 
     <!-- favicons
      ================================================== -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel = "icon" type = "image/png" href = "favicon.png">
 
     <!--  Title
     =================================================== -->
@@ -45,16 +49,17 @@
     @inertia
 
 
-    <div id="preloader">
-        <div id="loader"></div>
+    <div id = "preloader">
+        <div id = "loader"></div>
     </div>
 
 
-<!-- Java Script
-================================================== -->
-<script type="application/javascript" src="{{ asset('frontend/js/js/jquery-2.1.3.min.js') }}"></script>
-<script type="application/javascript" src="{{ asset('frontend/js/js/plugins.js') }}"></script>
-<script type="application/javascript" src="{{ asset('frontend/js/js/main.js') }}"></script>
+    <!-- Java Script
+    ================================================== -->
+    <script type = "application/javascript" src = "{{ asset('frontend/js/js/jquery-2.1.3.min.js') }}"></script>
+    <script type = "application/javascript" src = "{{ asset('frontend/js/js/plugins.js') }}"></script>
+    <script type = "application/javascript" src = "{{ asset('frontend/js/js/main.js') }}"></script>
+    <script type = "application/javascript" src = "{{ asset('backend/js/main.js') }}"></script>
 
 </body>
 

@@ -18,7 +18,9 @@
                             <input class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="password_confirmation" name="password_confirmation" type="password" required="" placeholder="Confirm Password" v-model="form.password_confirmation" aria-label="Confirm Password">
                         </div>
                         <div class="mt-4">
-                            <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">Register</button>
+                            <button class = "px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
+                                    type = "submit">Submit
+                            </button>
                         </div>
                         <Link class="inline-block right-0 align-baseline font-bold text-sm text-500 hover:text-blue-800" href="/login"> Already have an account ?</Link>
                     </form>
@@ -28,11 +30,11 @@
     </div>
 </template>
 <script>
-import { Inertia } from '@inertiajs/inertia';
-import { reactive } from 'vue';
+import {Inertia} from '@inertiajs/inertia';
+import {reactive} from 'vue';
 
-export default{
-    setup(){
+export default {
+    setup() {
         const form = reactive({
             name: null,
             email: null,

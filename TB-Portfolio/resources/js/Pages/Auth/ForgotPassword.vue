@@ -1,10 +1,5 @@
 <script setup>
-import BreezeButton from '@/Components/Button.vue';
-import BreezeGuestLayout from '@/Layouts/Guest.vue';
-import BreezeInput from '@/Components/Input.vue';
-import BreezeLabel from '@/Components/Label.vue';
-import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
-import { Head, useForm } from '@inertiajs/inertia-vue3';
+import {useForm} from '@inertiajs/inertia-vue3';
 
 defineProps({
     status: String,
@@ -20,30 +15,33 @@ const submit = () => {
 </script>
 
 <template>
-    <BreezeGuestLayout>
-        <Head title="Forgot Password" />
-
-        <div class="mb-4 text-sm text-gray-600">
-            Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
-        </div>
-
-        <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
-            {{ status }}
-        </div>
-
-        <BreezeValidationErrors class="mb-4" />
-
-        <form @submit.prevent="submit">
-            <div>
-                <BreezeLabel for="email" value="Email" />
-                <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
+    <div class = "h-screen font-sans login bg-cover">
+        <div class = "container mx-auto h-full flex flex-1 justify-center items-center">
+            <div class = "w-full max-w-lg">
+                <div class = "leading-loose">
+                    <div class = "mb-4 text-sm text-gray-600">
+                        Forgot your password? No problem. Just let us know your email address and we will email you a
+                        password reset link that will allow you to choose a new one.
+                    </div>
+                    <div v-if = "status" class = "mb-4 font-medium text-sm text-green-600">
+                        {{ status }}
+                    </div>
+                    <form class = "max-w-xl m-4 p-10 bg-white rounded shadow-xl" @submit.prevent = "submit">
+                        <p class = "text-gray-800 font-medium">Login</p>
+                        <div>
+                            <input id = "email" v-model = "form.email" aria-label = "Email"
+                                   autocomplete = "username"
+                                   class = "w-full px-5 py-1 text-gray-700 bg-gray-200 rounded"
+                                   name = "email" placeholder = "Email" required = "" type = "text">
+                        </div>
+                        <div class = "mt-4 items-center justify-between">
+                            <button class = "px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"
+                                    type = "submit">Email Password Reset Link
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <BreezeButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Email Password Reset Link
-                </BreezeButton>
-            </div>
-        </form>
-    </BreezeGuestLayout>
+        </div>
+    </div>
 </template>
