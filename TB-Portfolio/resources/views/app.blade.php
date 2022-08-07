@@ -22,22 +22,16 @@
     <link rel = "stylesheet" href = "{{ asset('frontend/css/css/vendor.css') }}">
     <link rel = "stylesheet" href = "{{ asset('backend/styles.css') }}">
     <link rel = "stylesheet" href = "{{ asset('backend/all.css') }}">
+    <script src = "https://kit.fontawesome.com/791afc6e4d.js" crossorigin = "anonymous"></script>
     <link href = "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i"
           rel = "stylesheet">
 
-
     <!-- script
-    ================================================== -->
+ ================================================== -->
     <script type = "application/javascript" src = "{{ asset('frontend/js/js/modernizr.js') }}"></script>
     <script type = "application/javascript" src = "{{ asset('frontend/js/js/pace.min.js') }}"></script>
 
-    <!-- favicons
-     ================================================== -->
     <link rel = "icon" type = "image/png" href = "favicon.png">
-
-    <!--  Title
-    =================================================== -->
-
 
     <!-- Scripts -->
     @routes
@@ -48,11 +42,9 @@
 <body id="top">
     @inertia
 
-
     <div id = "preloader">
         <div id = "loader"></div>
     </div>
-
 
     <!-- Java Script
     ================================================== -->
@@ -60,7 +52,6 @@
     <script type = "application/javascript" src = "{{ asset('frontend/js/js/plugins.js') }}"></script>
     <script type = "application/javascript" src = "{{ asset('frontend/js/js/main.js') }}"></script>
     <script type = "application/javascript" src = "{{ asset('backend/js/main.js') }}"></script>
-
 </body>
 
 </html>

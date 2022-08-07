@@ -2,9 +2,9 @@
     <!--Header Section Starts Here-->
     <nav class = "bg-nav">
         <div class = "flex justify-between">
-            <div class = "p-1 mx-3 inline-flex items-center">
-                <i class = "fas fa-bars pr-2 text-white" onclick = "sidebarToggle()"></i>
-                <h1 class = "text-white p-2">Logo</h1>
+            <div class = "pl-1 mx-3 inline-flex items-center">
+                <a class = "menu-toggle" href = "#" @click = "sidebarToggle"><span></span></a>
+                <h1 class = "text-white p-2">Thomas Bockhorn</h1>
             </div>
             <div class = "p-1 flex flex-row items-center">
                 <a class = "text-white p-2 mr-2 no-underline hidden md:block lg:block"
@@ -36,10 +36,18 @@
 
 <script>
 export default {
-    name: "navbar"
+    name: "navbar",
+    methods: {
+        myFunction(e) {
+            console.log(e);
+            e.classList.toggle("change")
+        }
+    }
 }
 </script>
 
 <style scoped>
-
+.menu-toggle {
+    margin-top: -1px;
+}
 </style>
