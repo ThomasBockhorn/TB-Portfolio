@@ -262,6 +262,7 @@
 import auth_layout from "../Layouts/Authenticated.vue";
 
 export default {
-    layout: auth_layout
+    layout: auth_layout,
+    Head: 'Dashboard'
 }
 </script>

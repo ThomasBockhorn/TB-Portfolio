@@ -3,9 +3,7 @@
         <div class = "min-h-screen flex flex-col">
             <navbar @sidebarToggle = "sidebarStatus($event)"></navbar>
             <div class = "flex flex-1">
-                <transition class = "slide" name = "slide">
-                    <sidebar v-if = "status"></sidebar>
-                </transition>
+                <sidebar v-if = "status"></sidebar>
                 <main class = "bg-white-300 flex-1 p-3 overflow-hidden">
                     <slot />
                 </main>
@@ -27,7 +25,7 @@ export default {
     },
     data() {
         return {
-            status: Boolean
+            status: false
         }
     },
     methods: {
@@ -43,16 +41,5 @@ export default {
 }
 </script>
 <style scoped>
-.slide-leave-active,
-.slide-enter-active {
-    transition: 5s;
-}
 
-.slide-enter {
-    transform: translate(100%, 0);
-}
-
-.slide-leave-to {
-    transform: translate(-100%, 0);
-}
 </style>
