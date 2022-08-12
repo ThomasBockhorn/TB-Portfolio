@@ -11,7 +11,7 @@
                    href = "https://github.com/tailwindadmin/admin">Github</a>
 
 
-                <img alt = "" class = "inline-block h-8 w-8 rounded-full" onclick = "profileToggle()"
+                <img alt = "" class = "inline-block h-8 w-8 rounded-full"
                      src = "https://avatars0.githubusercontent.com/u/4323180?s=460&v=4">
                 <a class = "text-white p-2 no-underline hidden md:block lg:block" href = "#"
                    onclick = "profileToggle()">Adam Wathan</a>
@@ -23,7 +23,7 @@
                         <li><a class = "no-underline px-4 py-2 block text-black hover:bg-grey-light" href = "#">Notifications</a>
                         </li>
                         <li>
-                            <hr class = "border-t mx-2 border-grey-ligght">
+                            <hr class = "border-t mx-2 border-grey-light">
                         </li>
                         <li><a class = "no-underline px-4 py-2 block text-black hover:bg-grey-light"
                                href = "#">Logout</a></li>
@@ -37,10 +37,15 @@
 <script>
 export default {
     name: "navbar",
+    data() {
+        return {
+            show: true
+        }
+    },
     methods: {
-        myFunction(e) {
-            console.log(e);
-            e.classList.toggle("change")
+        sidebarToggle() {
+            this.show = !this.show;
+            this.$emit('sidebarToggle', this.show);
         }
     }
 }

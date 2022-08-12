@@ -1,9 +1,11 @@
 <template>
     <div class = "mx-auto bg-grey-400">
         <div class = "min-h-screen flex flex-col">
-            <navbar></navbar>
+            <navbar @sidebarToggle = "sidebarStatus($event)"></navbar>
             <div class = "flex flex-1">
-                <sidebar></sidebar>
+                <transition class = "slide" name = "slide">
+                    <sidebar v-if = "status"></sidebar>
+                </transition>
                 <main class = "bg-white-300 flex-1 p-3 overflow-hidden">
                     <slot />
                 </main>
@@ -23,7 +25,16 @@ export default {
         sidebar,
         Footer,
     },
-
+    data() {
+        return {
+            status: Boolean
+        }
+    },
+    methods: {
+        sidebarStatus(status) {
+            this.status = status;
+        }
+    },
     mounted() {
         let addScript = document.createElement('script');
         addScript.setAttribute('src', 'backend/js/js/main.js');
@@ -31,3 +42,17 @@ export default {
     }
 }
 </script>
+<style scoped>
+.slide-leave-active,
+.slide-enter-active {
+    transition: 5s;
+}
+
+.slide-enter {
+    transform: translate(100%, 0);
+}
+
+.slide-leave-to {
+    transform: translate(-100%, 0);
+}
+</style>
