@@ -26,15 +26,6 @@
 
                     </div>
                 </div> <!-- /intro-content -->
-
-                <ul class="intro-social">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                </ul> <!-- /intro-social -->
-
             </section> <!-- /intro -->
 
 
@@ -948,7 +939,7 @@
                     </div>
 
                     <div id="go-top">
-                        <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+                        <a class = "smoothscroll" href = "#top" title = "Back to Top"><i class = "arrow up"></i></a>
                     </div>
 
                 </div> <!-- /row -->
@@ -965,5 +956,15 @@ export default {
 </script>
 
 <style scoped>
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
 
+.up {
+    transform: rotate(230deg);
+    -webkit-transform: rotate(230deg);
+}
 </style>

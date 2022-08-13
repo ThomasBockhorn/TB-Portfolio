@@ -22,6 +22,7 @@
     <link rel = "stylesheet" href = "{{ asset('frontend/css/css/vendor.css') }}">
     <link rel = "stylesheet" href = "{{ asset('backend/styles.css') }}">
     <link rel = "stylesheet" href = "{{ asset('backend/all.css') }}">
+    <link rel = "stylesheet" href = "{{ asset('frontend/css/css/font-awesome/css/font-awesome.css') }}">
     <script src = "https://kit.fontawesome.com/791afc6e4d.js" crossorigin = "anonymous"></script>
     <link href = "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i"
           rel = "stylesheet">

@@ -13,7 +13,7 @@
                 </Link>
             </li>
             <li class = "w-full h-full py-3 px-2 border-b border-light-border">
-                <a class = "font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline"
+                <a class = "font-sans hover:font-normal text-sm text-nav-item no-underline"
                    href = "forms.html">
                     <i class = "fab fa-wpforms float-left mx-2"></i>
                     Forms
@@ -21,7 +21,7 @@
                 </a>
             </li>
             <li class = "w-full h-full py-3 px-2 border-b border-light-border">
-                <a class = "font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline"
+                <a class = "font-sans hover:font-normal text-sm text-nav-item no-underline"
                    href = "buttons.html">
                     <i class = "fas fa-grip-horizontal float-left mx-2"></i>
                     Buttons
@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li class = "w-full h-full py-3 px-2 border-b border-light-border">
-                <a class = "font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline"
+                <a class = "font-sans hover:font-normal text-sm text-nav-item no-underline"
                    href = "tables.html">
                     <i class = "fas fa-table float-left mx-2"></i>
                     Tables
@@ -37,7 +37,7 @@
                 </a>
             </li>
             <li class = "w-full h-full py-3 px-2 border-b border-light-border">
-                <a class = "font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline"
+                <a class = "font-sans hover:font-normal text-sm text-nav-item no-underline"
                    href = "ui.html">
                     <i class = "fab fa-uikit float-left mx-2"></i>
                     Ui components
@@ -45,7 +45,7 @@
                 </a>
             </li>
             <li class = "w-full h-full py-3 px-2 border-b border-300-border">
-                <a class = "font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline"
+                <a class = "font-sans hover:font-normal text-sm text-nav-item no-underline"
                    href = "modals.html">
                     <i class = "fas fa-square-full float-left mx-2"></i>
                     Modals
@@ -53,29 +53,29 @@
                 </a>
             </li>
             <li class = "w-full h-full py-3 px-2">
-                <a class = "font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline"
+                <a class = "font-sans hover:font-normal text-sm text-nav-item no-underline"
                    href = "#" @click = "displayDropdown">
                     <i class = "far fa-file float-left mx-2"></i>
-                    Pages
+                    Settings
                     <span><i class = "fa fa-angle-down float-right"></i></span>
                 </a>
                 <ul v-show = "show" class = "list-reset -mx-2 bg-white-medium-dark">
                     <li class = "border-t mt-2 border-light-border w-full h-full px-2 py-3">
-                        <a class = "mx-4 font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline"
-                           href = "login.html">
-                            Login Page
+                        <Link class = "mx-4 font-sans hover:font-normal text-sm text-nav-item no-underline"
+                              href = "/logout" method = "post">
+                            Logout
                             <span><i class = "fa fa-angle-right float-right"></i></span>
-                        </a>
+                        </Link>
                     </li>
                     <li class = "border-t border-light-border w-full h-full px-2 py-3">
-                        <a class = "mx-4 font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline"
+                        <a class = "mx-4 font-sans hover:font-normal text-sm text-nav-item no-underline"
                            href = "register.html">
                             Register Page
                             <span><i class = "fa fa-angle-right float-right"></i></span>
                         </a>
                     </li>
                     <li class = "border-t border-light-border w-full h-full px-2 py-3">
-                        <a class = "mx-4 font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline"
+                        <a class = "mx-4 font-sans hover:font-normal text-sm text-nav-item no-underline"
                            href = "404.html">
                             404 Page
                             <span><i class = "fa fa-angle-right float-right"></i></span>
